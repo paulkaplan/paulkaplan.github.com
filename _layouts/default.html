@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<!-- 1140px Grid styles for IE -->
+  	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+  	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600|Merriweather:400,300,700" rel="stylesheet" type="text/css">
+  	<link rel="stylesheet" href="/css/1140.css" type="text/css" media="screen" />
+  	<link rel="stylesheet" href="/css/styles.css" type="text/css"
+  	 media="screen"/>
+  	 <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen"/>
+   	
+  </head>
+  <body>
+    <div class="container">
+      <div class="row header">
+        <div class="twelvecol last">
+          <h1><span class="big">Paul Kaplan</span></h1>
+            <h3><span class="bffig">experimentalist programming</span></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row content">
+        <div class="fourcol">
+          <h2>on the web</h2>
+          <div class="info-section">
+            <h4>Experiments</h4>
+            Recently I've been making all sorts of experimental web apps based on novel interface controllers. Most experiments use Node.js
+            <ul>
+              <a href="#"><li>Browser face tracking for HTML5 games</li></a>
+              <a href="#"><li>Web audio theremin</li></a>
+              <a href="#"><li>iPhone/Browser tethering as a game controller</li></a>
+              <a href="#"><li>Webcam, Processing and Websockets</li></a>
+              <a href="#"><li>Single screen multiplayer browser games</li></a>      
+            </ul>
+          </div>
+          <div class="info-section">
+            <h4>Websites</h4>
+            A few of the more finished products. For more complete sites, I use Ruby on Rails.
+            <ul>
+              <a href="#"><li>University of Chicago Marketplace</li></a>
+              <a href="#"><li>ScheduleSpy</li></a>
+              <a href="#"><li>Ideas on Big Paper</li></a>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="fourcol">
+          <h2>in real life</h2>
+          <div class="info-section">
+            <h4>Hardware</h4>
+            I've always been a big tinkerer, I especially like hacking on all sorts of small electronics. Computer interfaces have always been a passion, including multitouch, audio and accelerometer based input.
+            <ul>
+              <a href="#"><li>Multitouch surfaces using diffuse illumination</li></a>
+              <a href="#"><li>Front camera laser light place MT television</li></a>
+              <a href="#"><li>Using mic input for an intensity aware keyboard</li></a>
+              <a href="#"><li>General Arduino fun</li></a>
+            </ul>
+          </div>
+          
+            
+            <div class="info-section">
+              <p><h4>Organizations</h4>
+            <a href="#"><h5>hack@uchicago</h5></a>
+            A group for students interested in all types of computer, electronics and hardware hacking. We hold weekly hack nights for students to work on independent or group projects and see demos by local developers, programmers and artists.
+            </p>
+            <p>
+            <a href="#"><h5>DVL: Data Visualization Lab</h5></a>
+            My second <a href="#">Uncommon Fund Project</a> was funded earlier this year to build a large multitouch surface for interactive, interdisciplinary data visualizations. 
+            </p>
+          </div>
+        </div>
+        <div class="fourcol last">
+          <h2>for science</h2>
+          <div class="info-section">
+            <!-- <h4>Academic Research</h4> -->
+            <h4>Granular Materials</h4><h5>University of Chicago</h5>
+            <p>I'm currently working on <span class="alt">designer particles</span> to find specific force characteristics of <span class="alt">jammed granular systems</span> using 3D printing, fast X-Ray imaging and computed tomography.
+          </div>
+          <div class="info-section">
+            <h4>Particle Astrophysics</h4><h5> Columbia University</h5>
+            
+            <p>I also spent two summers at Columbia on a <a href="#">Dark Matter</a> balloon project, including a month at the <a href="#">Space Sciences Lab at Berkeley</a> fabricating and assembling the balloon and detectors.</p>
+          </ul>
+          </div>
+          <!-- <h2>and in space<a href="#" class="ding">*</a></h2>           -->
+        </div>
+    </div>
+    <!-- <div class="row footer"><h5>I've always had trouble with the third thing in a list.</h5></div> -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="fourcol">
+          <h1>Paul Kaplan</h1><br \><br \>
+          <h4><a href="#">Archive</a></h4>
+                <ul>
+                  {% for post in site.posts %}
+                    <li><time datetime="{{ post.date | date_to_xmlschema }}" pubdate="pubdate" class="time-ago">{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+                  {% endfor %}</ul></p>
+        </div>
+        <div class="eightcol last">
+          <div class="row">
+            <h1>I build things</h1>
+          </div>
+          {{ content }}
+        </div>
+      </div>
+    </div> -->
+    <script src="/js/head.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      head.js(
+        { jquery   :   '/js/jquery.js' },
+        { paul     :   '/js/paul.js'   }
+        // {% for js in page.javascripts %}
+        //   ,{ {{js.name}} : '{{ js.location }}' }
+        // {% endfor %}
+        // {% for post in site.posts %}
+        //   {% for js in post.javascripts %}
+        //     ,{ {{js.name}} : '{{ js.location }}' }
+        //   {% endfor %}
+        // {% endfor %}
+      );
+    </script>
+    <script src="/js/mediaqueries.js" type="text/javascript"></script>
+  </body>
+</html>
