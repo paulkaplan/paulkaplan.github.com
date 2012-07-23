@@ -4,7 +4,7 @@ layout: default
 ---
 A snippet I found useful for building sites using Jekyll and HeadJS. On many pages I want some custom javascript to be loaded, but most of the javascript on my sites is loaded asynchronously by HeadJS. Of course I would prefer to have all that in my default template instead of writing it out differently for ever page. So in the YAML at the top of each Jekyll post I put
 
-    {% highlight yaml %}
+    {% highlight yaml %}{% raw %}
     ---
     title : new post
     ... 
@@ -17,7 +17,7 @@ A snippet I found useful for building sites using Jekyll and HeadJS. On many pag
         location : '/path/to/other/js'
       ...
     ---
-    {% endhighlight %}
+    {% endraw %}{% endhighlight %}
 And in my default template I have 
 
     {% highlight js%}{% raw %}
