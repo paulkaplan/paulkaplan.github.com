@@ -1,75 +1,87 @@
 ---
-title: paul kaplan
 layout: default
+title: Gallery - Paul Kaplan
+images:
+  -
+    caption: window
+    thumb: /img/thumbs/window.thumb.png
+    source: /img/photo/window.png
+  -
+    caption: window
+    thumb: /img/thumbs/entrance.thumb.png
+    source: /img/photo/entrance.png
+  -
+    caption: window
+    thumb: /img/thumbs/disc.thumb.png
+    source: /img/photo/disc.png  
+  -
+    caption: window
+    thumb: /img/thumbs/3027.thumb.png
+    source: /img/photo/3027.png
+
+  -
+    caption: window
+    thumb: /img/thumbs/window.thumb.png
+    source: /img/photo/3027.png
+  -
+    caption: window
+    thumb: /img/thumbs/window.thumb.png
+    source: /img/photo/3027.png
+  -
+    caption: window
+    thumb: /img/thumbs/window.thumb.png
+    source: /img/photo/3027.png
+
 ---
-<div class="fourcol">
-  <h2>on the web</h2>
-  <div class="info-section">
-    <h4>Experiments</h4>
-    Recently I've been making all sorts of experimental web apps based on novel interface controllers. Most experiments use Node.js
-    <ul>
-      <a href="#"><li>Browser face tracking for HTML5 games</li></a>
-      <a href="#"><li>Web audio theremin</li></a>
-      <a href="#"><li>iPhone/Browser tethering as a game controller</li></a>
-      <a href="#"><li>Webcam, Processing and Websockets</li></a>
-      <a href="#"><li>Single screen multiplayer browser games</li></a>      
-    </ul>
+<div class="bg"></div>
+<div class="row">
+
+
+  <div class="threecol text"  style="z-index: 100;"> 
+      <h2>digital matter</h2><br />
+      <h2>programmable materials</h2><br />
+      <h2>tangible interfaces</h2><br />
+      <p style="text-align:right;"><span class="arrow"> <a href="#">&laquo;</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="arrow"><a href="#">&raquo;</a></span></p> 
+      <br /><br /><br />
+      <!-- <h3>about</h3> -->
   </div>
-  <div class="info-section">
-    <h4>Websites</h4>
-    A few of the more finished products. For more complete sites, I use Ruby on Rails.
-    <ul>
-      <a href="#"><li>University of Chicago Marketplace</li></a>
-      <a href="#"><li>ScheduleSpy</li></a>
-      <a href="#"><li>Ideas on Big Paper</li></a>
-    </ul>
+
+</div>
+
+<!-- <div class="row"></div>
+
+<div class="row" style="padding-top:20em;" >
+  <div class="onecol"></div>
+  <div class="fourcol">
+    <p style="margin:0; padding:0.75em;border:1px solid #999; background: rgba(230,230,230,0.5); font-size:0.9em;">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit .
+          --><!--
   </div>
-  <div class="info-section">
-    <h4>Posts</h4>
-    <ul>
-      {% for post in site.posts offset: 0 limit: 10 %}
-            <li>
-          <h5><a href="{{ post.url }}">{{ post.title }}</a> &raquo; {{ post.date | date_to_string }}</p>
-            </li>
-      {% endfor %}
-    </ul>
+</div> -->
+  <!--</div>
   </div>
 </div>
-<div class="fourcol">
-  <h2>in real life</h2>
-  <div class="info-section">
-    <h4>Hardware</h4>
-    I've always been a big tinkerer, I especially like hacking on all sorts of small electronics. Computer interfaces have always been a passion, including multitouch, audio and accelerometer based input.
-    <ul>
-      <a href="#"><li>Multitouch surfaces using diffuse illumination</li></a>
-      <a href="#"><li>Front camera laser light place MT television</li></a>
-      <a href="#"><li>Using mic input for an intensity aware keyboard</li></a>
-      <a href="#"><li>General Arduino fun</li></a>
-    </ul>
+
+<div class="row">
+  <div class="threecol">
+    <a class="gallery-image" href="/img/photo/full.png" title=""><img src="/img/thumbs/full.thumb.png" alt="" /></a>
   </div>
-    <div class="info-section">
-      <p><h4>Organizations</h4>
-    <a href="#"><h5>hack@uchicago</h5></a>
-    A group for students interested in all types of computer, electronics and hardware hacking. We hold weekly hack nights for students to work on independent or group projects and see demos by local developers, programmers and artists.
-    </p>
-    <p>
-    <a href="#"><h5>DVL: Data Visualization Lab</h5></a>
-    My second <a href="#">Uncommon Fund Project</a> was funded earlier this year to build a large multitouch surface for interactive, interdisciplinary data visualizations. 
-    </p>
+  <div class="threecol"><h3>Education</h3></div>
+
+  <div class="threecol">
+    <a class="gallery-image" href="/img/photo/disc.png" title=""><img src="/img/thumbs/disc.thumb.png" alt="" /></a>
+  </div>
+  <div class="threecol last"></div>
+</div>
+
+<div class="row">
+  <div class="threecol">
+    <a class="gallery-image" href="/img/photo/window.png" title=""><img src="/img/thumbs/window.thumb.png" alt="" /></a>
+  </div>
+  <div class="threecol"></div>
+  <div class="threecol"><h3>Education</h3></div>
+  <div class="threecol last">
+    <a class="gallery-image" href="/img/photo/3027.png" title=""><img src="/img/thumbs/3027.thumb.png" alt="" /></a>
   </div>
 </div>
-<div class="fourcol last">
-  <h2>for science</h2>
-  <div class="info-section">
-    <!-- <h4>Academic Research</h4> -->
-    <h4>Granular Materials</h4><h5>University of Chicago</h5>
-    <p>I'm currently working on <span class="alt">designer particles</span> to find specific force characteristics of <span class="alt">jammed granular systems</span> using 3D printing, fast X-Ray imaging and computed tomography.
-  </div>
-  <div class="info-section">
-    <h4>Particle Astrophysics</h4><h5> Columbia University</h5>
-    
-    <p>I also spent two summers at Columbia on a <a href="#">Dark Matter</a> balloon project, including a month at the <a href="#">Space Sciences Lab at Berkeley</a> fabricating and assembling the balloon and detectors.</p>
-  </ul>
-  </div>
-  <!-- <h2>and in space<a href="#" class="ding">*</a></h2>           -->
-</div>
+ -->

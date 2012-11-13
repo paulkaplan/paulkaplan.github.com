@@ -1,18 +1,36 @@
+# Deployment uses SFTP by default when you use deploy_via :copy, and there
+# doesn't seem to be any way to configure it.  Unfortunately, we don't run
+# SFTP on our servers, so it fails.  This forces it to use SCP instead.
+# http://www.capify.org/index.php/OverridingTaskCommands
+#
+module UseScpForDeployment
+  def self.included(base)
+    base.send(:alias_method, :old_upload, :upload)
+    base.send(:alias_method, :upload,     :new_upload)
+  end
+  
+  def new_upload(from, to)
+    old_upload(from, to, :via => :scp)
+  end
+end
+
+Capistrano::Configuration.send(:include, UseScpForDeployment)
+
 set :application, "paulkaplan" # Application name.
-set :location, "javelin" # Web server url.
-set :user, "paulkaplan" # Remote user name. Must be able to log in via SSH.
-set :port, 6721 # SSH port. Only required if non default ssh port used.
+set :location, "atlas" # Web server url.
+set :user, "plkap74" # Remote user name. Must be able to log in via SSH.
+set :port, 7124 # SSH port. Only required if non default ssh port used.
 set :use_sudo, false # Remove or set the true if all commands should be run through sudo.
 
 set :local_user, "plkap74" # Local user name.
 
-set :deploy_to, "/Users/#{user}/#{application}"
+set :deploy_to, "~/www/#{application}"
 set :deploy_via, :copy # Copy the files across as an archive rather than using Subversion on the remote machine.
 set :copy_dir, "/tmp/capistrano" # Directory in which the archive will be created. Defaults to /tmp. Note that I had problems with /tmp because on my machine it's on a different partition to the rest of my filesystem and hence a hard link could not be created across devices.
 set :copy_remote_dir, "/tmp/capistrano" # Directory on the remote machine where the archive will be copied. Defaults to /tmp.
 
 # Use without Subversion on local machine.
-set :repository,  "."
+set :repository,  "./_site"
 set :scm, :none
 
 # Use with Subversion on local machine.
@@ -58,7 +76,9 @@ namespace :remote do
     Create a symlink to the application.
   DESC
   task :create_symlink, :roles => :web do
-    current_path = "/usr/www/#{application}/"
+    current_path = "/var/www/#{application}/"
+    run "mkdir -p #{current_path}"
+    run "mkdir -p #{current_path}releases"
     print "    creating symlink from releases to #{current_path}.\n"
     # puts release_path, current_path
     run "rm -rf #{current_path[0..-2]}"

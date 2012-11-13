@@ -1,0 +1,52 @@
+---
+layout: default
+title: Gallery - Paul Kaplan
+images:
+  -
+    caption: window
+    thumb: /img/thumbs/window.thumb.png
+    source: /img/photo/window.png
+  -
+    caption: window
+    thumb: /img/thumbs/entrance.thumb.png
+    source: /img/photo/entrance.png
+  -
+    caption: window
+    thumb: /img/thumbs/disc.thumb.png
+    source: /img/photo/disc.png  
+  -
+    caption: window
+    thumb: /img/thumbs/3027.thumb.png
+    source: /img/photo/3027.png
+
+  -
+    caption: window
+    thumb: /img/thumbs/window.thumb.png
+    source: /img/photo/3027.png
+  -
+    caption: window
+    thumb: /img/thumbs/window.thumb.png
+    source: /img/photo/3027.png
+  -
+    caption: window
+    thumb: /img/thumbs/window.thumb.png
+    source: /img/photo/3027.png
+
+---
+
+
+{% tablerow image in page.images cols:4 %}
+  {% if tablerowloop.col_first %}
+    <div class="row">
+  {% endif %}
+  {% if tablerowloop.col_last %}
+    <div class="threecol last">
+  {% else %}
+    <div class="threecol">
+  {% endif %}
+      <a class="gallery-image" href="{{image.source}}" title="{{image.caption}}"><img src="{{ image.thumb}}" alt="{{ image.caption }}" /></a>
+    </div>
+  {% if tablerowloop.col_last %}
+    </div>
+  {% endif %}
+{% endtablerow %}

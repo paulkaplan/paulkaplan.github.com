@@ -1,3 +1,5 @@
 source :rubygems
-gem 'jekyll', '0.11.0'
+gem 'redcarpet'
+gem 'jekyll'
 gem 'rdiscount'
+gem 'liquid'

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Audio Theremin</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal website for Paul Kaplan" />
+    <meta name="keywords" content="Paul,Kaplan,UChicago,University of Chicago, personal, interfaces" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600|Merriweather:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/1140.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row header">
+        <div class="twelvecol last">
+          <h1><span class="big">Paul Kaplan</span></h1>
+          <h3><span class="bffig">experimentalist programming</span></h3>
+        </div>
+      </div>
+      <div class="row content"><br \>
+        <h3>Web Audio Theremin</h3><br \>
+        
+        <p><button id="startTheremin">Start Theremin</button>
+<button id="stopTheremin">Stop Theremin</button></p>
+
+<h4 style="margin-bottom:-2em;"> theremin </h4>
+
+
+<p><video id="input" autoplay="autoplay" controls="false" style="display: none;"></video>
+<canvas id="output" height="110" width="150"></canvas></p>
+
+      </div>
+    </div>
+    <script src="/js/head.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      head.js(
+        { jquery   :   '/js/jquery.js' },
+        { paul     :   '/js/paul.js'   }
+        
+          ,{ ccv : '/js/posts/20120725/ccv.js' }
+        
+          ,{ RAF : '/js/posts/common/requestAnimationFrame.js' }
+        
+          ,{ three : '/js/posts/common/three.js' }
+        
+          ,{ sine : '/js/posts/20120725/sine.js' }
+        
+          ,{ theremin : '/js/posts/20120725/theremin.js' }
+        
+        , function(){
+          
+            $('#startTheremin').click( function() { eval(initTrigger()) });
+          
+            $('#stopTheremin').click( function() { eval(stop()) });
+          
+        }
+      );
+    </script>
+    <script src="/js/mediaqueries.js" type="text/javascript"></script>
+  </body>
+</html>
