@@ -1,20 +1,42 @@
----
-title: paul kaplan
-layout: default
----
-<div class="fourcol">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>paul kaplan</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal website for Paul Kaplan" />
+    <meta name="keywords" content="Paul,Kaplan,UChicago,University of Chicago, personal, interfaces" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600|Merriweather:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/1140.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="/css/syntax.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="/css/fonts.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="/css/fancybox.css" type="text/css" media="screen"/>
+    
+  </head>
+  <body>
+    <div class="container">
+      <div class="row header">
+        <div class="fourcol">
+          <h1><span class="big">Paul Kaplan</span></h1>
+          <h3><span>experimentalist programming</span></h3>
+        </div>
+        <div class="eightcol last"></div>
+      </div>
+      <div class="row content">
+        <div class="fourcol">
   <h2>on the web</h2>
   <div class="info-section">
     <h4>Experiments</h4>
     
     Recently I've been making all sorts of experimental web apps based on novel interface controllers. Most experiments use Node.js
     <ul>
-      {% for post in site.posts offset: 0 limit: 5 %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <!-- <div class="post-date">&raquo; {{ post.date | date_to_string }}</div> -->
-          </li>
-      {% endfor %}
+      
       <!-- <a href="#"><li>Browser face tracking for HTML5 games</a></li>
       <a href="#"><li>Web audio theremin</a></li>
       <a href="#"><li>iPhone/Browser tethering as a game controller</a></li>
@@ -210,3 +232,19 @@ I'm currently working on designer particles to find specific force characteristi
   -->
 </div>
 
+
+      </div>
+    </div>
+    <script src="/js/head.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      head.js(
+        { jquery   :   '/js/jquery.js' },
+        // { fancybox :   '/js/fancybox.js'},
+        { paul     :   '/js/paul.js'   }
+        // 
+        // 
+      );
+    </script>
+    <script src="/js/mediaqueries.js" type="text/javascript"></script>
+  </body>
+</html>
