@@ -1,39 +1,161 @@
 ---
-layout : default
-projects : 
+title: paul kaplan
+layout: old
+
+thumbs : 
   -
-    name : ant chase
-    thumb: "/img/projects/antThumb.png"
-    description: "WebGL powered visualization of chaotic orbits in a simple dynamical system"
+    title : tower
+    url   : img/projects/towerThumb.png
+  - 
+    title : Ant Chase
+    url   : img/projects/antThumb.png
+  - 
+    title : Editor
+    url   : img/projects/editorThumb.png
+  - 
+    title : Motorcycle
+    url   : img/projects/motoThumb.png
+  - 
+    title : Lightboard
+    url   : img/projects/lightsThumb.png
   -
-    name : light board
----    
-<div class="row page">
-  <h2>Current Projects</h2>
-</div>
-<div class="row content">
-  <div class="fivecol project">
-    <img src="/img/projects/antThumb.png" alt="Ant Chase" />
-    <h3>ant chase</h3>
-    <p>WebGL powered visualization of chaotic orbits arising from simple dynamical system. An extension of my final project for PHYS25100 Chaos, Complexity and Computers</p>
+    title : logistic map
+    url   : img/projects/logisticMap.png
+  -
+    title : faceMap
+    url   : img/projects/faceMapThumb.png
+  -
+    title : touch web
+    url   : img/projects/touchThumb.png
+  -
+    title : logistic map
+    url   : img/projects/engineThumb.png
+---
+<div class="row">
+  <div class="threecol label">
+  <h2>personal</h2>
   </div>
-  <div class="onecol"></div>
-  <div class="fivecol project last">
-    <img src="/img/projects/lightsThumb.png" alt="Light Board" />
-    <h3>light board</h3>
-    <p>A 'theatre' with 14 fully adjustable lights with a system to add timed light cues, implemented in WebGL. I made this so I could do my scenic design homework without having to go across campus.</p>
+  <div class="ninecol last">
+    <p>I'm a senior at the University of Chicago majoring in Physics. I'm also a <em>developer</em>, a javascript junkie in particular, but also pretty handy with Ruby, Rails, Python and C.
+    I am a <em>scientist at heart</em>, I have worked on things as theoretical as dark matter all the way down to the mechanical properties of 3D printed particles.
+    </p><p>I love having the <em>freedom, creativity</em> and <em>skill set</em> to follow my nose, and I have had the unique opportunity to stick my nose into <em>just about everything. </em>
+    </p>
+    <p>Below you'll find a small sampling of the things I've made over my years in college. These are not finished products by any means, but they give a good sense of <em>what I like</em> and <em>how I like doing it.</em></p> 
   </div>
 </div>
 <div class="row">
-  <div class="fivecol project">
-    <img src="/img/projects/noise.png" alt="Light Board" />
-    <h3>noisy controls</h3>
-    <p>One interesting problem I've been facing is efficient GPU noise and (pseudo)randomness. Visual noise is combined with "control noise", the interaction is not random, but very unclear.</p>
+  <div class="threecol label">
+  <h2>experiments</h2>
   </div>
-  <div class="onecol"></div>
-  <div class="fivecol project last">
-    <img src="/img/projects/logisticMap.png" alt="Light Board" />
-    <h3>bifurcation diagram</h3>
-    <p>An interactive bifurcation diagram showing the period doubling behaviour of (in this case) the <a href="http://en.wikipedia.org/wiki/Logistic_map" alt="logistic map">logistic map</a>. To do: implement other functions, show universality, trace out the f(x=0.5) lines.</p>
+  <div class="ninecol last">  
+
+    <div class="row"> 
+      {% for thumb in page.thumbs limit:2 offset:0 %}
+        <div class="fourcol" >
+        <img src="{{thumb.url}}"alt="{{thumb.title}}" />
+        </div>
+      {% endfor %}
+      {% for thumb in page.thumbs limit:1 offset:2 %}
+      <div class="fourcol last" >
+      <img src="{{thumb.url}}"alt="{{thumb.title}}" />
+      </div>
+      </div><div class="row">
+      {% endfor%}
+      {% for thumb in page.thumbs limit:2 offset:3 %}
+      <div class="fourcol" >
+      <img src="{{thumb.url}}"alt="{{thumb.title}}" />
+      </div>
+      {% endfor%}
+      {% for thumb in page.thumbs limit:1 offset:5 %}
+      <div class="fourcol last" >
+      <img src="{{thumb.url}}"alt="{{thumb.title}}" />
+      </div>
+      </div>{% endfor %}
+      <div class="row">
+        {% for thumb in page.thumbs limit:2 offset:6 %}
+        <div class="fourcol" >
+        <img src="{{thumb.url}}"alt="{{thumb.title}}" />
+        </div>
+        {% endfor%}
+        {% for thumb in page.thumbs limit:1 offset:8 %}
+        <div class="fourcol last" >
+        <img src="{{thumb.url}}"alt="{{thumb.title}}" />
+        </div>
+        </div>{% endfor %}
+    <!-- <ul>
+      <a href="http://paulkaplan.me/Experiments/AntChase"><li>Chaotic orbits in simple dynamical systems</a></li>
+      <a href="http://paulkaplan.me/Experiments/Lights"><li>An interactive theatrical 'light board'</a></li>
+      <a href="http://paulkaplan.me/Experiments/Picking/battle.html"><li>Javascript physics engines and block towers</a></li>
+      <a href="#"><li>iPhone/Browser tethering as a game controller</a></li>
+      <a href="#"><li>Webcam, Processing and Websockets</a></li>
+      <a href="/archive_index.html"><li class="more">more</a></li>
+    </ul> -->
+  </div>
+</div>
+<div class="row">
+
+<div class="threecol label">
+  <h2>community</h2>
+</div>
+<div class="ninecol last">
+  <div class="info-section">
+
+    <div class="text-description"><a href="http://hack.uchicago.edu/"><h5>hack@uchicago</h5></a><p>
+    A group for students interested in all types of computer, electronics and hardware hacking. We hold weekly hack nights for students to work on independent or group projects and see demos by local programmers and artists.</p></div>
+  <div class="text-description">
+  <a href="http://dvl.uchicago.edu"><h5>DVL: Data Visualization Lab</h5></a><p>
+  My second <a href="http://uncommonfund.uchicago.edu/">Uncommon Fund Project</a> was funded earlier this year to build a large multitouch surface for interactive, interdisciplinary data visualizations. </p>
+  </div>
+  </div>
+</div>
+<div class="row">
+<div class="threecol label">
+  <h2>scientific research</h2>
+</div>
+<div class="ninecol last">
+  <div class="info-section">
+    <div class="research text-description"><a href="http://jfi.uchicago.edu/~jaeger/group/JaegerLab/Projects/Projects.html" class="no-style"><span class="research-title">Granular Materials</span> - </a><span class="research-school">University of Chicago</span><p>
+I'm currently working on "designed aggregates", basically piles of different shaped particles, to find specific force characteristics of jammed granular systems using 3D printing, fast X-Ray imaging and computed tomography.</p>
+    </div>
+    <div class="research text-description"><a href="http://gamma1.astro.ucla.edu/gaps/index.html" class="no-style"><span class="research-title">Particle Astrophysics</span></a> - <span class="research-school">Columbia University</span><p>
+    I also spent two summers at Columbia on a Dark Matter balloon project, including a month at the <a href="#">Space Sciences Lab at Berkeley</a> fabricating the balloon and detectors.</p></div>
+    </div>
+    <h4 style="padding-top: 0.5em; ">Publications</h4>
+    <ul style="font-size: 0.9em; margin-top: 0.5em; ">
+      <li><em>Aggregate properties of Platonic solids and beyond</em> - <a href="PK_Poster.pdf">(Poster, 2012)</a></li>
+      <li><em>Development of large format Si(Li) detectors for the GAPS dark matter experiment</em> - <a href="http://www.sciencedirect.com/science/article/pii/S0168900212004172">(2012)</a></li>   
+    </ul>
+  </div>
+</div>
+<div class="row">
+<div class="threecol label">
+    <h2>education</h2>
+</div>
+<div class="ninecol last">
+
+    <div class="info-section">
+      <h4>University of Chicago</h4>B.S. Physics - June 2013
+      <ul style="font-size: 0.9em; margin-top: 0.5em; ">
+        <!-- <li>B.S. Physics, 2013</li> -->
+        <li>James Franck Institute Summer Fellow - 2012</li>
+        <li>Uncommon Fund Recipient - 2011, 2012</li>
+        <li>Dean's List - 2009, 2010, 2011, 2012</li>
+        <!-- <li>Chicago Careers in Business - Financial Markets</li> -->
+      </ul>
+    </div>
+</div>
+<div class="row">
+<div class="threecol label">
+  <h2>contact</h2>
+</div>
+<div class="ninecol last">
+<div class="info-section">
+  You can <a href="mailto:paul.kaplan.74@gmail.com">email</a> me or find me in the usual places<br>
+  <div class="iconset">
+    <a href="https://www.facebook.com/paulkaplan74"><i class="icon-facebook"></i></a>
+    <a href="https://github.com/paulkaplan"><i class="icon-github"></i></a>
+    <a href="https://vimeo.com/paulkaplan"><i class="icon-film"></i></a>
+    <a href="https://plus.google.com/108768010677598288977/posts"><i class="icon-google-plus"></i></a>
+    <a href="http://www.linkedin.com/home"><i class="icon-linkedin"></i></a>
   </div>
 </div>

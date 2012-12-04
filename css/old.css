@@ -23,11 +23,12 @@ body {
   line-height: 1.5em;
   padding-left: 1em;
   padding-right: 1em;
+  color: #444;
 }
 h1{
 	margin-top:2em;
   font-family:'Merriweather',serif;
- 	background-color:rgba(255,255,255,0.2);
+  color:#000;
 	padding-right:0.2em;
 
 }
@@ -92,8 +93,8 @@ ol li, ol ul, ol ol {
 
 ul { margin-top: 1em; }
 
-h1 { font-size: 2em; line-height: 1.5em; font-weight: 400;}
-h2 { font-size: 1.25em; line-height: 1.25em; font-weight: 200;}
+h1 { font-size: 3em; line-height: 1.5em; font-weight: 400;}
+h2 { font-size: 1.55em; line-height: 1.25em; font-weight: 200;}
 h3 { font-size: 1.5em; font-weight: 200;}
 h4 { font-size: 1.25em; font-weight: 200; margin-bottom: 0.1em; }
 h5 { font-size: 1em;font-weight: 400; }
@@ -107,13 +108,14 @@ li { line-height: 1.5em; }
 }
 
 .row > div {
-  margin-top: 0.5em;
+  margin-top: 1.0em;
   padding-top: 0.5em;
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
 }
 /*.content > div { padding: 0.5em; border: 1px solid rgba(113,180,217, 0.5); }*/
-
+.label { border-left: 1px solid #ccc;  border-top: 1px solid #ccc;}
+/*h2 { color: #888; }*/
 .row {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -145,11 +147,13 @@ h2, h6 { text-align: right; }
   width: 80%;
   margin-bottom: 2em !important;
 }
+em { font-style: normal; color:rgb(100,167,203);}
+.images .fourcol { margin-right:1%; width:32% }
 .iconset > a > i { font-size: 3em; }
 .more { text-align: right; padding-top: 0.75em; margin-bottom: -1em; }
 .post-date { font-size: 0.9em; text-align: right; }
 /*.no-style { color: #000; text-decoration: none; }*/
-.research { margin: 0.5em; }
+/*.research { margin: 0.5em; }*/
 .research-title {}
 .text-description > p { border-left: 1px solid #EEE; margin-left: 0.25em; padding-left: 0.5em; }
 .iconset { padding-left: 2em; font-size: 0.6em;line-height: 8em; letter-spacing: 2em; }
