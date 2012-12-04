@@ -6,30 +6,39 @@ thumbs :
   -
     title : tower
     url   : towerThumb.png
+    link  : /projects/tower.html
   - 
     title : Ant Chase
     url   : antThumb.png
+    link  : http://paulkaplan.me/Experiments/AntChase/
   - 
     title : Editor
     url   : editorThumb.png
+    link  : http://paulkaplan.me/Experiments/Editor/
   - 
     title : Motorcycle
     url   : motoThumb.png
+    link  : http://paulkaplan.me/Experiments/AntChase/moto.html
   - 
     title : Lightboard
     url   : lightsThumb.png
+    link  : http://paulkaplan.me/Experiments/Light/
   -
     title : logistic map
     url   : logisticMap.png
+    link  : http://paulkaplan.me/Experiments/AntChase/logisticMap.html
   -
     title : faceMap
     url   : faceMapThumb.png
+    link  : https://vimeo.com/41747939
   -
     title : touch web
     url   : touchThumb.png
+    link  : https://vimeo.com/45411440
   -
-    title : logistic map
+    title : engine
     url   : engineThumb.png
+    link  : http://paulkaplan.me/Engine.js/
 ---
 <div class="row">
   <div class="threecol label">
@@ -52,34 +61,34 @@ thumbs :
     <div class="row"> 
       {% for thumb in page.thumbs limit:2 offset:0 %}
         <div class="fourcol" >
-        <a href="/projects/{{thumb.title}}.html" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
         </div>
       {% endfor %}
       {% for thumb in page.thumbs limit:1 offset:2 %}
       <div class="fourcol last" >
-        <a href="/projects/{{thumb.title}}.html" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
       </div>
       </div><div class="row">
       {% endfor%}
       {% for thumb in page.thumbs limit:2 offset:3 %}
       <div class="fourcol" >
-        <a href="/projects/{{thumb.title}}.html" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
       </div>
       {% endfor%}
       {% for thumb in page.thumbs limit:1 offset:5 %}
       <div class="fourcol last" >
-        <a href="/projects/{{thumb.title}}.html" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
       </div>
       </div>{% endfor %}
       <div class="row">
         {% for thumb in page.thumbs limit:2 offset:6 %}
         <div class="fourcol" >
-          <a href="/projects/{{thumb.title}}.html" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
         </div>
         {% endfor%}
         {% for thumb in page.thumbs limit:1 offset:8 %}
         <div class="fourcol last" >
-          <a href="/projects/{{thumb.title}}.html" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
         </div>
         </div>{% endfor %}
     <!-- <ul>
