@@ -1,11 +1,12 @@
 ---
 title: paul kaplan
-layout: old
+layout: default
 
 thumbs : 
   -
     title : tower
     url   : img/projects/towerThumb.png
+    project : projects/tower.html
   - 
     title : Ant Chase
     url   : img/projects/antThumb.png
@@ -52,7 +53,7 @@ thumbs :
     <div class="row"> 
       {% for thumb in page.thumbs limit:2 offset:0 %}
         <div class="fourcol" >
-        <img src="{{thumb.url}}"alt="{{thumb.title}}" />
+        <a href="{{thumb.project}}" alt="project link"><img src="{{thumb.url}}"alt="{{thumb.title}}" /></a>
         </div>
       {% endfor %}
       {% for thumb in page.thumbs limit:1 offset:2 %}
