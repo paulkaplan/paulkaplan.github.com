@@ -28,8 +28,10 @@
   <script src="/js/mediaqueries.js" type="text/javascript"></script>
   <script src="/js/fancybox.js" type="text/javascript"></script>
   <script>
+    var n=0;
     $(".gallery")
       .attr('rel', 'gallery')
+      .each( function(i, v){ $(this).attr('title', v.toString().substring(41, 51)); })
       .fancybox({
         openEffect  : 'none',
         closeEffect : 'none',
