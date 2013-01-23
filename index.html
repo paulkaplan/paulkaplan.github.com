@@ -48,55 +48,61 @@ thumbs :
     url   : engineThumb.png
     link  : http://paulkaplan.me/Engine.js/
 ---
-<div class="row">
-  <div class="threecol label">
-  <h2>personal</h2>
-  </div>
-  <div class="ninecol last">
-    <p>I'm a senior at the University of Chicago majoring in Physics. I'm also a <em>developer</em>, a javascript junkie in particular, but also pretty handy with Ruby, Rails, Python and C.
-    I am a <em>scientist at heart</em>, I have worked on things as theoretical as dark matter all the way down to the mechanical properties of 3D printed particles.
-    </p><p>I love having the <em>freedom, creativity</em> and <em>skill set</em> to follow my nose, and I have had the unique opportunity to stick my nose into <em>just about everything. </em>
-    </p>
-    <p>Below you'll find a small sampling of the things I've made over my years in college. These are not finished products by any means, but they give a good sense of <em>what I like</em> and <em>how I like doing it.</em></p> 
-  </div>
-</div>
-<div class="row">
-  <div class="threecol label">
-  <h2>experiments</h2>
-  </div>
-  <div class="ninecol last">  
 
-    <div class="row"> 
+<div class="row">
+
+  <div class="twelvecol last">  
+
+    <div class="row projects"> 
       {% for thumb in page.thumbs limit:2 offset:0 %}
         <div class="fourcol" >
         <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+        <p>{{thumb.title}}</p>
         </div>
       {% endfor %}
       {% for thumb in page.thumbs limit:1 offset:2 %}
       <div class="fourcol last" >
-        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
+
       </div>
-      </div><div class="row">
+      </div><div class="row projects">
       {% endfor%}
       {% for thumb in page.thumbs limit:2 offset:3 %}
       <div class="fourcol" >
-        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
+
       </div>
       {% endfor%}
       {% for thumb in page.thumbs limit:1 offset:5 %}
       <div class="fourcol last" >
-        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
+
       </div>
       </div>{% endfor %}
-      <div class="row">
+      <div class="row projects">
         {% for thumb in page.thumbs limit:2 offset:6 %}
         <div class="fourcol" >
-          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
+
         </div>
         {% endfor%}
         {% for thumb in page.thumbs limit:1 offset:8 %}
         <div class="fourcol last" >
-          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
+          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
+
+        </div>
+        </div>{% endfor %}
+        <div class="row projects">
+        {% for thumb in page.thumbs limit:2 offset:9 %}
+        <div class="fourcol" >
+          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
+
+        </div>
+        {% endfor%}
+        {% for thumb in page.thumbs limit:1 offset:11 %}
+        <div class="fourcol last" >
+          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
+
         </div>
         </div>{% endfor %}
     <!-- <ul>
@@ -109,6 +115,20 @@ thumbs :
     </ul> -->
   </div>
 </div>
+
+<div class="row">
+  <div class="threecol label">
+  <h2>personal</h2>
+  </div>
+  <div class="ninecol last">
+    <p>I'm a senior at the University of Chicago majoring in Physics. I'm also a <em>developer</em>, a javascript junkie in particular, but also pretty handy with Ruby, Rails, Python and C.
+    I am a <em>scientist at heart</em>, I have worked on things as theoretical as dark matter all the way down to the mechanical properties of 3D printed particles.
+    </p><p>I love having the <em>freedom, creativity</em> and <em>skill set</em> to follow my nose, and I have had the unique opportunity to stick my nose into <em>just about everything. </em>
+    </p>
+    <p>Below you'll find a small sampling of the things I've made over my years in college. These are not finished products by any means, but they give a good sense of <em>what I like</em> and <em>how I like doing it.</em></p> 
+  </div>
+</div>
+
 <div class="row">
 
 <div class="threecol label">

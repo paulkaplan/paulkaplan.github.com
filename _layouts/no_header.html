@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ title }} | Paul Kaplan</title>
+    <title>{{ page.title }} | Paul Kaplan</title>
     <meta charset="utf-8" />
     <meta name="description" content="Personal website for Paul Kaplan" />
     <meta name="keywords" content="Paul,Kaplan,UChicago,University of Chicago, personal, interfaces" />
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/1140.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="/css/paulkaplan.css" type="text/css" media="screen"/>    
     <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="/css/fancybox/fancybox.css" type="text/css" media="screen"/>    
+    <link rel="stylesheet" href="/css/fancybox/fancybox.css" type="text/css" media="screen"/>
 
   
   </head>
@@ -28,15 +28,16 @@
   <script src="/js/mediaqueries.js" type="text/javascript"></script>
   <script src="/js/fancybox.js" type="text/javascript"></script>
   <script>
-    var n=0;
-    $(".gallery")
-      .attr('rel', 'gallery')
-      .each( function(i, v){ $(this).attr('title', v.toString().substring(45, 50)); })
-      .fancybox({
-        openEffect  : 'none',
-        closeEffect : 'none',
-        nextEffect  : 'none',
-        prevEffect  : 'none'
+    $(document).ready( function(){
+      $("a.gallery")
+        .attr('rel', 'gallery')
+        .each( function(i, v){ $(this).attr('title', v.toString().match(/3.\d+/)); })
+        .fancybox({
+          nextEffect  : 'none',
+          prevEffect  : 'none',
+          closeBtn    : false,
+          arrows      : false
+      });
     });
 
   </script>
