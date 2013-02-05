@@ -29,7 +29,7 @@ Obviously a lot for just 36 hours. The first iteration I did entirely in javascr
 
 <div class="img left"><a href="/img/thumbs/lathe.png" class="gallery"><img src="/img/thumbs/lathe.png" /></a><p class="caption">Ray traced rendering of a wine glass made on the lathe</p></div>
 
-The fancy renderings are part of v0.0.0.0.2 that I made a couple days before [ORD Camp](http://ordcamp.com/, "ORD Camp") last weekend. [Zach Kaplan](http://about.me/zachkaplan "Zach at about.me"), Inventables CEO, invited me to come volunteer at ORD Camp and show off the lathe and help organize and introduce people to the 3D printers they brought.
+The fancy renderings are part of v0.0.0.0.2 that I made a couple days before [ORD Camp](http://ordcamp.com/ "ORD Camp") last weekend. [Zach Kaplan](http://about.me/zachkaplan "Zach at about.me"), Inventables CEO, invited me to come volunteer at ORD Camp and show off the lathe and help organize and introduce people to the 3D printers they brought.
 
 
 I moved the system to Rails, to take advantage of built in database support and try out a couple of different queuing systems, I ended up using [Sidekiq](https://github.com/mperham/sidekiq "sidekiq"). I needed some sort of delayed job system because I wanted to move the mesh generation process and rendering out of the servers way. While mesh generation usually takes less than a second, rendering with a ray tracer could take up to a couple minutes, so it needed to be done in the background. You can see the [code for the new version on Github](https://github.com/paulkaplan/Lathe). 
