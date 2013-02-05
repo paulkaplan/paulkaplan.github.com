@@ -36,18 +36,21 @@ p a { text-decoration: underline; color:rgb(113,180,217); }
 .footer { min-height:3em; } 
 p { padding-top:0.5em; padding-left:1em; padding-right:1em;}
 p + p  { padding-top: 1em;}
-p + ul { padding-top:0.25em;}
+p + ul { padding-top:0z.25em;}
 
 /* Thank you A List Apart, http://www.alistapart.com/articles/taminglists/ */
 ul li:before {
-	content: "\00BB \0020";
+	content: "\00BB \0020 ";
+  margin-right:0.25em;
 }
 	
 ul li, ul ul, ul ol,
 ol li, ol ul, ol ol {
   list-style-type: none;
-  margin-left: 1.75em;
+  margin-left: 1.5em;
 }
+
+li {margin-top: 0.75em;}
 
 
 

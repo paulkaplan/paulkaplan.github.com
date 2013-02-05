@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }} | Paul Kaplan</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Personal website for Paul Kaplan" />
+    <meta name="keywords" content="Paul,Kaplan,UChicago,University of Chicago, personal, interfaces" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+   
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600|Merriweather:400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/1140.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/css/paulkaplan.css" type="text/css" media="screen"/>    
+    <link rel="stylesheet" href="/css/site.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="/css/fancybox/fancybox.css" type="text/css" media="screen"/>    
+
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="row header">
+        <div class="fourcol name">
+          <a href="/"><h1><span class="big">Paul Kaplan</span></h1></a>
+        </div>
+        <div class="eightcol last right">
+        </div>
+      </div>
+<div class="row">
+<!--   <div class="fivecol">
+    <img src="{{page.image}}" alt="{{page.title}}"/>
+  </div> -->
+  <div class="twelvecol last">
+    {{ content }}
+  </div>
+</div>
+    </div>
+  </body>
+  <script src="/js/jquery.js" type="text/javascript"></script>
+  <script src="/js/paulkaplan.js" type="text/javascript"></script>
+  <script src="/js/mediaqueries.js" type="text/javascript"></script>
+  <script src="/js/fancybox.js" type="text/javascript"></script>
+  <script>
+    $(".gallery").fancybox();
+  </script>
+</html>
