@@ -1,11 +1,11 @@
 ---
-title : Lathe
-layout : project_md
-image : /img/thumbs/lathe.png
+title : "Hackathon Project: A Digital Lathe"
+layout : post
+preview : 'For our first (un)hackathon I really wanted to built an interface for designing some kind of 3D object in browser, and have it come off the web and directly into the 3D printer (i.e. in an STL file). I wanted to attack objects of "reduced dimensionality": objects that are technically 3D objects in their final form but can be easily represented in 2D.'
 ---
-
-## Hackathon Project: Digital Lathe
 <div class="img left" style="max-width:45%;"><a href="/img/projects/lathe_at_hackathon.jpg" class="gallery"><img src="/img/projects/lathe_at_hackathon.jpg" /></a><p class="caption">Digital Lathe + 3D Printer, photo by Vivian Wan</p></div>
+
+## {{ page.title }}
 
 
 The UChicago 'hackers' group, [hack@uchicago](http://hack.uchicago.edu), that a few friends and I started on campus a few years ago has grown considerably. Since our hackathon last year in the spring took place at the Booth School of Business and certainly had a very corporate, startup-weekend type of feel to it we decided to go the other direction this time. 

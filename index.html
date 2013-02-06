@@ -10,7 +10,7 @@ thumbs :
   -
     title : Lathe
     url   : lathe.png
-    link  : /projects/lathe.html
+    link  : /2013/02/05/Digital-Lathe.html
   -
     title : Molecular Dynamics
     url   : md.png
@@ -58,8 +58,8 @@ thumbs :
 ---
 
 <div class="row">
-
-  <div class="twelvecol last">  
+  <div class="threecol label"><h2>experiments</h2></div>
+  <div class="ninecol last">  
 
     <div class="row projects"> 
       {% for thumb in page.thumbs limit:2 offset:0 %}
@@ -123,10 +123,22 @@ thumbs :
     </ul> -->
   </div>
 </div>
-
+<div class="row">
+<div class="threecol label">
+  <h2>recent posts</h2>
+</div>
+<div class="ninecol last">
+      {% for post in site.posts %}
+  <div class="row">
+    <div class="fourcol"><a href="{{post.url}}"><b>{{post.title}}</b></a><br /><i><span class="date">{{post.date | date_to_string}}</span></i></div>
+    <div class="eightcol last">{{ post.preview | strip_html | truncatewords:60 }} <a href="{{post.url}}"> more</a></div>
+  </div>
+    {% endfor %}
+  </ul>
+</div>
 <div class="row">
   <div class="threecol label">
-  <h2>personal</h2>
+  <h2>about me</h2>
   </div>
   <div class="ninecol last">
     <p>I'm a senior at the University of Chicago majoring in Physics. I'm also a <em>developer</em>, a javascript junkie in particular, but also pretty handy with Ruby, Rails, Python and C.
@@ -139,22 +151,24 @@ thumbs :
 
 </div>
 
-<div class="row">
 
+<!-- <div class="row">
 <div class="threecol label">
-  <h2>community</h2>
+    <h2>education</h2>
 </div>
 <div class="ninecol last">
-  <div class="info-section">
 
-    <div class="text-description"><a href="http://hack.uchicago.edu/"><h5>hack@uchicago</h5></a><p>
-    A group for students interested in all types of computer, electronics and hardware hacking. We hold weekly hack nights for students to work on independent or group projects and see demos by local programmers and artists.</p></div>
-  <div class="text-description">
-  <a href="http://dvl.uchicago.edu"><h5>DVL: Data Visualization Lab</h5></a><p>
-  My second <a href="http://uncommonfund.uchicago.edu/">Uncommon Fund Project</a> was funded earlier this year to build a large multitouch surface for interactive, interdisciplinary data visualizations. </p>
-  </div>
-  </div>
-</div>
+    <div class="info-section">
+      <h4>University of Chicago</h4>B.S. Physics - June 2013
+      <ul style="font-size: 0.9em; margin-top: 0.5em; ">
+        <li>B.S. Physics, 2013</li>
+        <li>James Franck Institute Summer Fellow - 2012</li>
+        <li>Uncommon Fund Recipient - 2011, 2012</li>
+        <li>Dean's List - 2009, 2010, 2011, 2012</li>
+      </ul>
+    </div>
+</div> -->
+
 <div class="row">
 <div class="threecol label">
   <h2>scientific research</h2>
@@ -174,23 +188,27 @@ I'm currently working on "designed aggregates", basically piles of different sha
     </ul>
   </div>
 </div>
+
+<!---------------------------->
+
+
 <div class="row">
+
 <div class="threecol label">
-    <h2>education</h2>
+  <h2>in the community</h2>
 </div>
 <div class="ninecol last">
+  <div class="info-section">
 
-    <div class="info-section">
-      <h4>University of Chicago</h4>B.S. Physics - June 2013
-      <ul style="font-size: 0.9em; margin-top: 0.5em; ">
-        <!-- <li>B.S. Physics, 2013</li> -->
-        <li>James Franck Institute Summer Fellow - 2012</li>
-        <li>Uncommon Fund Recipient - 2011, 2012</li>
-        <li>Dean's List - 2009, 2010, 2011, 2012</li>
-        <!-- <li>Chicago Careers in Business - Financial Markets</li> -->
-      </ul>
-    </div>
+    <div class="text-description"><a href="http://hack.uchicago.edu/"><h5>hack@uchicago</h5></a><p>
+    A group for students interested in all types of computer, electronics and hardware hacking. We hold weekly hack nights for students to work on independent or group projects and see demos by local programmers and artists.</p></div>
+  <div class="text-description">
+  <a href="http://dvl.uchicago.edu"><h5>DVL: Data Visualization Lab</h5></a><p>
+  My second <a href="http://uncommonfund.uchicago.edu/">Uncommon Fund Project</a> was funded earlier this year to build a large multitouch surface for interactive, interdisciplinary data visualizations. </p>
+  </div>
+  </div>
 </div>
+
 <div class="row">
 <div class="threecol label">
   <h2>contact</h2>
@@ -205,4 +223,5 @@ I'm currently working on "designed aggregates", basically piles of different sha
     <a href="https://plus.google.com/108768010677598288977/posts"><i class="icon-google-plus"></i></a>
     <a href="http://www.linkedin.com/home"><i class="icon-linkedin"></i></a>
   </div>
+</div>
 </div>
