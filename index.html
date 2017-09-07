@@ -1,235 +1,61 @@
----
-title: paul kaplan
-layout: default
-
-thumbs : 
-  -
-    title : Pixel Printer
-    url   : pixel_printer.png
-    link  : http://paulkaplan.me/Experiments/PixelPrinter/
-  - 
-    title : Tilt Maze
-    url   : maze.png
-    link  : http://paulkaplan.me/Experiments/Mobile/tilt_maze.html
-  -
-    title : CAD
-    url   : cad.png
-    link  : http://paulkaplan.me/Experiments/CAD/press_pull.html
-  -
-    title : Lathe
-    url   : lathe.png
-    link  : /2013/01/25/Digital-Lathe.html
-  -
-    title : Molecular Dynamics
-    url   : md.png
-    link  : http://paulkaplan.me/Experiments/Granular/
-  -
-    title : Tower
-    url   : towerThumb.png
-    link  : http://paulkaplan.me/2012/12/23/Tower-Jenga.html
-  - 
-    title : Ant Chase
-    url   : antThumb.png
-    link  : http://paulkaplan.me/Experiments/AntChase/
-  - 
-    title : Editor
-    url   : editorThumb.png
-    link  : http://paulkaplan.me/Experiments/Editor/
-  - 
-    title : Motorcycle
-    url   : motoThumb.png
-    link  : http://paulkaplan.me/Experiments/AntChase/moto.html
-  -
-    title : Chaos
-    url   : chaos.png
-    link  : /projects/8bit/28.html
-  - 
-    title : Lightboard
-    url   : lightsThumb.png
-    link  : http://paulkaplan.me/Experiments/Light/
-  -
-    title : Logistic map
-    url   : logisticMap.png
-    link  : http://paulkaplan.me/Experiments/AntChase/logisticMap.html
-  -
-    title : FaceMap
-    url   : faceMapThumb.png
-    link  : https://vimeo.com/41747939
-  -
-    title : Touch Web
-    url   : touchThumb.png
-    link  : https://vimeo.com/45411440
-  -
-    title : Engine
-    url   : engineThumb.png
-    link  : http://paulkaplan.me/Engine.js/
----
-
-<div class="row">
-  <div class="threecol label"><h2>experiments</h2></div>
-  <div class="ninecol last">  
-
-    <div class="row projects"> 
-      {% for thumb in page.thumbs limit:2 offset:0 %}
-        <div class="fourcol" >
-        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>
-        <p>{{thumb.title}}</p>
-        </div>
-      {% endfor %}
-      {% for thumb in page.thumbs limit:1 offset:2 %}
-      <div class="fourcol last" >
-        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
-
-      </div>
-      </div><div class="row projects">
-      {% endfor%}
-      {% for thumb in page.thumbs limit:2 offset:3 %}
-      <div class="fourcol" >
-        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
-
-      </div>
-      {% endfor%}
-      {% for thumb in page.thumbs limit:1 offset:5 %}
-      <div class="fourcol last" >
-        <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
-
-      </div>
-      </div>{% endfor %}
-      <div class="row projects">
-        {% for thumb in page.thumbs limit:2 offset:6 %}
-        <div class="fourcol" >
-          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
-
-        </div>
-        {% endfor%}
-        {% for thumb in page.thumbs limit:1 offset:8 %}
-        <div class="fourcol last" >
-          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
-
-        </div>
-        </div>{% endfor %}
-        <div class="row projects">
-        {% for thumb in page.thumbs limit:2 offset:9 %}
-        <div class="fourcol" >
-          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
-
-        </div>
-        {% endfor%}
-        {% for thumb in page.thumbs limit:1 offset:11 %}
-        <div class="fourcol last" >
-          <a href="{{thumb.link}}" alt="project link"><img src="/img/thumbs/{{thumb.url}}"alt="{{thumb.title}}" /></a>        <p>{{thumb.title}}</p>
-
-        </div>
-        </div>{% endfor %}
-    <!-- <ul>
-      <a href="http://paulkaplan.me/Experiments/AntChase"><li>Chaotic orbits in simple dynamical systems</a></li>
-      <a href="http://paulkaplan.me/Experiments/Lights"><li>An interactive theatrical 'light board'</a></li>
-      <a href="http://paulkaplan.me/Experiments/Picking/battle.html"><li>Javascript physics engines and block towers</a></li>
-      <a href="#"><li>iPhone/Browser tethering as a game controller</a></li>
-      <a href="#"><li>Webcam, Processing and Websockets</a></li>
-      <a href="/archive_index.html"><li class="more">more</a></li>
-    </ul> -->
-  </div>
-</div>
-<div class="row">
-<div class="threecol label">
-  <h2>recent posts</h2>
-</div>
-<div class="ninecol last">
-      {% for post in site.posts %}
-  <div class="row">
-    <div class="fourcol"><a href="{{post.url}}"><b>{{post.title}}</b></a><br /><i><span class="date">{{post.date | date_to_string}}</span></i></div>
-    <div class="eightcol last">{{ post.preview | strip_html | truncatewords:60 }} <a href="{{post.url}}"> more</a></div>
-  </div>
-    {% endfor %}
-  </ul>
-</div>
-<div class="row">
-  <div class="threecol label">
-  <h2>about me</h2>
-  </div>
-  <div class="ninecol last">
-    <p>I'm a senior at the University of Chicago majoring in Physics. I'm also a <em>developer</em>, a javascript junkie in particular, but also pretty handy with Ruby, Rails, Python and C.
-    I am a <em>scientist at heart</em>, I have worked on things as theoretical as dark matter all the way down to the mechanical properties of 3D printed particles.
-    </p><p>I love having the <em>freedom, creativity</em> and <em>skill set</em> to follow my nose, and I have had the unique opportunity to stick my nose into <em>just about everything. </em>
-    </p>
-    <p>Below you'll find a small sampling of the things I've made over my years in college. These are not finished products by any means, but they give a good sense of <em>what I like</em> and <em>how I like doing it.</em> If you want more, check out <a href="/documents/PK_Resume.pdf" alt="resume">my resume</a></p> 
-
-  </div>
-
-</div>
-
-
-<!-- <div class="row">
-<div class="threecol label">
-    <h2>education</h2>
-</div>
-<div class="ninecol last">
-
-    <div class="info-section">
-      <h4>University of Chicago</h4>B.S. Physics - June 2013
-      <ul style="font-size: 0.9em; margin-top: 0.5em; ">
-        <li>B.S. Physics, 2013</li>
-        <li>James Franck Institute Summer Fellow - 2012</li>
-        <li>Uncommon Fund Recipient - 2011, 2012</li>
-        <li>Dean's List - 2009, 2010, 2011, 2012</li>
-      </ul>
-    </div>
-</div> -->
-
-<div class="row">
-<div class="threecol label">
-  <h2>scientific research</h2>
-</div>
-<div class="ninecol last">
-  <div class="info-section">
-    <div class="research text-description"><a href="http://jfi.uchicago.edu/~jaeger/group/JaegerLab/Projects/Projects.html" class="no-style"><span class="research-title">Granular Materials</span> - </a><span class="research-school">University of Chicago</span><p>
-I'm currently working on "designed aggregates", basically piles of different shaped particles, to find specific force characteristics of jammed granular systems using 3D printing, fast X-Ray imaging and computed tomography.</p>
-    </div>
-    <div class="research text-description"><a href="http://gamma1.astro.ucla.edu/gaps/index.html" class="no-style"><span class="research-title">Particle Astrophysics</span></a> - <span class="research-school">Columbia University</span><p>
-    I also spent two summers at Columbia on a Dark Matter balloon project, including a month at the <a href="#">Space Sciences Lab at Berkeley</a> fabricating the balloon and detectors.</p></div>
-    </div>
-    <h4 style="padding-top: 0.5em; ">Publications</h4>
-    <ul style="font-size: 0.9em; margin-top: 0.5em; ">
-      <li><em>Aggregate properties of Platonic solids and beyond</em> - <a href="/documents/PK_Poster.pdf">(Poster, 2012)</a></li>
-      <li><em>Development of large format Si(Li) detectors for the GAPS dark matter experiment</em> - <a href="http://www.sciencedirect.com/science/article/pii/S0168900212004172">(2012)</a></li>   
-    </ul>
-  </div>
-</div>
-
-<!---------------------------->
-
-
-<div class="row">
-
-<div class="threecol label">
-  <h2>in the community</h2>
-</div>
-<div class="ninecol last">
-  <div class="info-section">
-
-    <div class="text-description"><a href="http://hack.uchicago.edu/"><h5>hack@uchicago</h5></a><p>
-    A group for students interested in all types of computer, electronics and hardware hacking. We hold weekly hack nights for students to work on independent or group projects and see demos by local programmers and artists.</p></div>
-  <div class="text-description">
-  <a href="http://dvl.uchicago.edu"><h5>DVL: Data Visualization Lab</h5></a><p>
-  My second <a href="http://uncommonfund.uchicago.edu/">Uncommon Fund Project</a> was funded earlier this year to build a large multitouch surface for interactive, interdisciplinary data visualizations. </p>
-  </div>
-  </div>
-</div>
-
-<div class="row">
-<div class="threecol label">
-  <h2>contact</h2>
-</div>
-<div class="ninecol last">
-<div class="info-section">
-  You can <a href="mailto:paul.kaplan.74@gmail.com">email</a> me or find me in the usual places<br>
-  <div class="iconset">
-    <a href="https://www.facebook.com/paulkaplan74"><i class="icon-facebook"></i></a>
-    <a href="https://github.com/paulkaplan"><i class="icon-github"></i></a>
-    <a href="https://vimeo.com/paulkaplan"><i class="icon-film"></i></a>
-    <a href="https://plus.google.com/108768010677598288977/posts"><i class="icon-google-plus"></i></a>
-    <a href="http://www.linkedin.com/home"><i class="icon-linkedin"></i></a>
-  </div>
-</div>
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paul Kaplan</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #EFECEB;
+        font-family: "Helvetica Neue", sans-serif;
+        font-size: 22px;
+        line-height: 1.5;
+      }
+      header, section, footer {
+        margin: 1.5rem;
+        max-width: 660px;
+      }
+      header {
+        border-top: 12px solid #FF3800;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      a {
+        color: #009494;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.2s;
+      }
+      a:hover {
+        color: #00585E;
+      }
+      img#robot {
+        display: block;
+        margin: 2rem auto 0;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Paul Kaplan</h1>
+    </header>
+    <section>
+      I am a software engineer specializing in interfaces for "hard&nbsp;fun" creative activities, like learning to code and 3d design.
+    </section>
+    <section>
+      Currently I am a senior engineer on <a href="https://scratch.mit.edu/">Scratch</a> at the MIT Media Lab.
+    </section>
+    <section>
+      Previously I was the creator and product manager of <a href="https://www.inventables.com/technologies/easel">Easel</a>, the 3d&nbsp;design tool easy enough for everyone to use.
+    </section>
+    <footer>
+      Check out my current work on <a href="https://github.com/paulkaplan">Github</a>, or reach out via <a href="mailto:paul.kaplan.74@gmail.com">email</a>.
+            <img id="robot" src="robot.png" />
+    </footer>
+  </body>
+</html>
